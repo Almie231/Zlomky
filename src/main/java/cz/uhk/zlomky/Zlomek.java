@@ -11,7 +11,8 @@ public class Zlomek {
     this.jmenovatel = jmenovatel;
     }
 
-    //"Getter"
+
+    //getter
     public int getCitatel() {
         return citatel;
     }
@@ -19,7 +20,7 @@ public class Zlomek {
         return jmenovatel;
     }
 
-    //"Setter"
+    //setter
     public void setCitatel(int citatel){
         this.citatel = citatel;
     }
