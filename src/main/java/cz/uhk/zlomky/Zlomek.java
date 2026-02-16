@@ -98,5 +98,10 @@ public class Zlomek {
 
         return new Zlomek(cit,jm);
     }
+    //pretizene plus pro pricteni celeho cisla
+    public Zlomek plus(int cislo){
+        int cit = citatel + jmenovatel * cislo;
+        return new Zlomek(cit, jmenovatel);
+    }
 
 }

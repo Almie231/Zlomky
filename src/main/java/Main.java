@@ -24,6 +24,10 @@ public class Main {
         };
         Zlomek prumer = prumer(pole);
         IO.println("Prumer je %s".formatted(prumer.zkratit()));
+
+        Zlomek cele_cislo = new Zlomek (1,5);
+        var soucetZ = cele_cislo.plus(10);
+        IO.println("Soucet je %s".formatted(soucetZ.zkratit()));
     }
 
     private static Zlomek prumer(Zlomek[] pole) {
