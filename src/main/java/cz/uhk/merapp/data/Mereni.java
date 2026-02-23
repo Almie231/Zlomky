@@ -40,4 +40,11 @@ public class Mereni {
         }
         return  min;
     }
+    public Number get(int index) {
+        return data.get(index);
+    }
+
+    public int size() {
+        return data.size();
+    }
 }
