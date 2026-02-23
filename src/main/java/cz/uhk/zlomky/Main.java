@@ -1,4 +1,4 @@
-import cz.uhk.zlomky.Zlomek;
+package cz.uhk.zlomky;
 
 public class Main {
     static void main() {
@@ -28,6 +28,8 @@ public class Main {
         Zlomek cele_cislo = new Zlomek (1,5);
         var soucetZ = cele_cislo.plus(10);
         IO.println("Soucet je %s".formatted(soucetZ.zkratit()));
+        int celecislo = prumer.intValue();
+        IO.println("Zlomek na cele cislo je : %d".formatted(celecislo));
     }
 
     private static Zlomek prumer(Zlomek[] pole) {
