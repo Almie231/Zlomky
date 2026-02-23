@@ -23,7 +23,12 @@ public class MereniApp {
 
         for (int i =0; i< mereni.size(); i++) {
             Number m = mereni.get(i);
-            IO.println(m);
+            if(m instanceof Double){
+                IO.println("%.2g".formatted(m));
+            }
+            else{
+                IO.println(m);
+            }
         }
     }
 }
