@@ -21,6 +21,9 @@ public class SpojovySeznam<E> implements Seznam<E> {
         }
 
     }
+    public void pridej (E hodnota, int index){
+
+    }
 
     @Override
     public void smaz(int pozice) {
