@@ -1,6 +1,8 @@
 package cz.uhk.util.impl;
 import cz.uhk.util.Seznam;
 
+import java.util.Iterator;
+
 public class SpojovySeznam<E> implements Seznam<E> {
     private PrvekSeznamu<E> prvni, posledni;
 
@@ -54,9 +56,25 @@ public class SpojovySeznam<E> implements Seznam<E> {
             pom=pom.dalsi;
             pocet++;
         }
-
-
         return pocet;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new  Iterator<E>() {
+            PrvekSeznamu<E> aktualni = prvni;
+            @Override
+            public boolean hasNext() {
+                return aktualni.dalsi != null;
+            }
+
+            @Override
+            public E next() {
+                aktualni = aktualni.dalsi;
+                return aktualni.hodnota;
+            }
+        };
+
     }
 }
 // typ prvku v seznamu s hodnotou zatim neznameho typu
