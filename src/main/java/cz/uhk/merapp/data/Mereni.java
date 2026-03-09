@@ -5,16 +5,16 @@ import cz.uhk.util.Seznam;
 import cz.uhk.util.impl.SpojovySeznam;
 
 public class Mereni {
-    private Seznam<Number> data =  new SpojovySeznam<>();
+    private Seznam<Number> data = new SpojovySeznam<>();
 
 
-    public void pridani (Number cislo){
+    public void pridani(Number cislo) {
         data.pridej(cislo);
     }
 
-    public Number secist(){
+    public Number secist() {
         Number soucet = 0;
-        for (int i =0; i < data.pocet(); i++){
+        for (int i = 0; i < data.pocet(); i++) {
             var cislo = data.vrat(i);
             soucet = soucet.doubleValue() + cislo.doubleValue();
         }
@@ -23,27 +23,30 @@ public class Mereni {
         //            soucet = soucet.doubleValue() + cislo.doubleValue();}
     }
 
-    public Number prumer(){
+    public Number prumer() {
         return secist().doubleValue() / data.pocet();
     }
-    public Number max(){
-        Number max =data.vrat(0);
-        for (Number cislo : data){
-            if (cislo.doubleValue() > max.doubleValue()){
+
+    public Number max() {
+        Number max = data.vrat(0);
+        for (Number cislo : data) {
+            if (cislo.doubleValue() > max.doubleValue()) {
                 max = cislo;
             }
         }
-        return  max;
+        return max;
     }
-    public Number min(){
-        Number min =data.vrat(0);
-        for (Number cislo : data){
-            if (cislo.doubleValue() < min.doubleValue()){
+
+    public Number min() {
+        Number min = data.vrat(0);
+        for (Number cislo : data) {
+            if (cislo.doubleValue() < min.doubleValue()) {
                 min = cislo;
             }
         }
-        return  min;
+        return min;
     }
+
     public Number get(int index) {
         return data.vrat(index);
     }

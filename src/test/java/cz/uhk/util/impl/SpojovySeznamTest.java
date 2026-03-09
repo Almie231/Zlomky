@@ -18,8 +18,8 @@ class SpojovySeznamTest {
     @Test
     void pridej() {
         initData();
-        seznam.pridej(50,2);
-        seznam.pridej(99,0);
+        seznam.pridej(50, 2);
+        seznam.pridej(99, 0);
         assertEquals(6, seznam.pocet());
         assertEquals(50, seznam.vrat(3));
         assertEquals(30, seznam.vrat(4));
@@ -48,7 +48,7 @@ class SpojovySeznamTest {
 
         assertEquals(10, seznam.vrat(0));
         assertEquals(20, seznam.vrat(1));
-        assertEquals(40, seznam.vrat(seznam.pocet()-1));
+        assertEquals(40, seznam.vrat(seznam.pocet() - 1));
 
         assertNull(seznam.vrat(100));
 
@@ -57,8 +57,8 @@ class SpojovySeznamTest {
     @Test
     @DisplayName("Pocet prvku")
     void pocet() {
-        assertEquals(0,seznam.pocet(), "pocet - prazdny seznam");
+        assertEquals(0, seznam.pocet(), "pocet - prazdny seznam");
         initData();
-        assertEquals(4,seznam.pocet(), "pocet - 2 prvky");
+        assertEquals(4, seznam.pocet(), "pocet - 2 prvky");
     }
 }
