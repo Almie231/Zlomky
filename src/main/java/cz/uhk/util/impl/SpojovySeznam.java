@@ -23,6 +23,7 @@ public class SpojovySeznam<E> implements Seznam<E> {
 
     @Override
     public void pridej(E hodnota, int index) {
+        //poresit kdyz index je hodne mimo rozsah
         var novy = new PrvekSeznamu<E>(hodnota);
         if (prvni == null) {
             //seznam je prazdny a davame 1. hodnotu
@@ -32,7 +33,7 @@ public class SpojovySeznam<E> implements Seznam<E> {
             novy.dalsi = prvni;
             prvni = novy;
         } else {
-            //Najdeme prvek ktery je tesne pred nasim indexem
+            //Najdeme prvek ktery je tesne pred nasim indexem - pouzit vratPrvek pac uz to mam xD
             PrvekSeznamu<E> aktualni = prvni;
             for (int i = 0; i < index - 1 && aktualni.dalsi != null; i++) {
                 aktualni = aktualni.dalsi;
