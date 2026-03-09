@@ -22,7 +22,26 @@ public class SpojovySeznam<E> implements Seznam<E> {
 
     }
     public void pridej (E hodnota, int index){
-
+       var novy = new PrvekSeznamu<E>(hodnota);
+        if (prvni == null) {
+            //seznam je prazdny a davame 1. hodnotu
+          prvni = posledni = novy;
+        } else if(index == 0){
+            //Vkladani na zacatek
+            novy.dalsi = prvni;
+            prvni = novy;
+        } else {
+            //Najdeme prvek ktery je tesne pred nasim indexem
+            PrvekSeznamu<E> aktualni = prvni;
+            for (int i =0; i<index-1 && aktualni.dalsi != null; i++){
+                aktualni = aktualni.dalsi;
+                novy.dalsi = aktualni.dalsi;
+                aktualni.dalsi = novy;
+                if (novy.dalsi == null){
+                    posledni = novy;
+                }
+            }
+        }
     }
 
     @Override
