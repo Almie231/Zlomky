@@ -9,5 +9,6 @@ public interface Seznam<E> extends Iterable<E> {
     void smaz(int pozice);
     E vrat(int pozice);
     int pocet();
+    void pridej(E prvek, int pozice);
 }
 

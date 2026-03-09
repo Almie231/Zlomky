@@ -21,6 +21,7 @@ public class SpojovySeznam<E> implements Seznam<E> {
         }
 
     }
+    @Override
     public void pridej (E hodnota, int index){
        var novy = new PrvekSeznamu<E>(hodnota);
         if (prvni == null) {

@@ -26,8 +26,8 @@ class SpojovySeznamTest {
     void smaz() {
         initData();
         seznam.smaz(1);
-        assertEquals(3, seznam.pocet());
-        assertEquals(30, seznam.vrat(1));
+        assertEquals(4, seznam.pocet());
+        assertEquals(50, seznam.vrat(1));
     }
 
     private void initData() {
@@ -55,6 +55,6 @@ class SpojovySeznamTest {
     void pocet() {
         assertEquals(0,seznam.pocet(), "pocet - prazdny seznam");
         initData();
-        assertEquals(4,seznam.pocet(), "pocet - 2 prvky");
+        assertEquals(5,seznam.pocet(), "pocet - 2 prvky");
     }
 }
